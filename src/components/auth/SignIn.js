@@ -11,6 +11,7 @@ export default class SignIn extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        this.setState({ email: '', password: '' })
     }
 
     handleChange = e => {
@@ -23,7 +24,7 @@ export default class SignIn extends Component {
             <div className='container p-14 px-36 flex flex-col'>
                 <form onSubmit={this.handleSubmit}>
                     <h5 className='text-2xl font-semibold p-4 text-gray-700'>Sign in</h5>
-                    <div className="p-4 w-3/5 sm:w-11/12">
+                    <div className="p-4 w-3/5">
                         <label className='opacity-75' htmlFor="email">Email :</label>
                         <input className='w-full border-b-2 border-gray-300 py-0.5 outline-none' type="email" id="email" onChange={this.handleChange} />
                     </div>
